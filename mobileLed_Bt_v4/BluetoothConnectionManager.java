@@ -10,9 +10,9 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.EditText;
 
-import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.annotation.NonNull;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -25,7 +25,7 @@ public class BluetoothConnectionManager {
     private final BluetoothAdapter bluetoothAdapter;
     private BluetoothSocket bluetoothSocket;
     private OutputStream outputStream;
-    boolean isConnected = false;
+    public boolean isConnected = false;
     private final EditText macAddressEditText;
     private static final UUID UUID_BT = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
@@ -37,7 +37,7 @@ public class BluetoothConnectionManager {
             showToast("Bluetooth not supported on this device.");
             mainActivity.finish();
         }
-        macAddressEditText.addTextChangedListener(new MacAddressTextWatcher());
+        macAddressEditText.addTextChangedListener(new MacAddressTextWatcher(macAddressEditText));
     }
 
     public void toggleBluetoothConnection() {
@@ -51,10 +51,11 @@ public class BluetoothConnectionManager {
     public void onRequestPermissionsResult(int requestCode, @NonNull int[] grantResults) {
         if (requestCode == REQUEST_BLUETOOTH_PERMISSION) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permission granted, continue with Bluetooth initialization
                 initializeBluetooth();
             } else {
+                // Permission denied by the user
                 showToast("Bluetooth permission is required to use the app.");
-                mainActivity.finish();
             }
         }
     }
@@ -63,7 +64,7 @@ public class BluetoothConnectionManager {
         new Handler(Looper.getMainLooper()).post(() -> mainActivity.showToast(message));
     }
 
-    private void initializeBluetooth() {
+    public void initializeBluetooth() {
         if (ContextCompat.checkSelfPermission(mainActivity, Manifest.permission.BLUETOOTH_CONNECT)
                 != PackageManager.PERMISSION_GRANTED) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
