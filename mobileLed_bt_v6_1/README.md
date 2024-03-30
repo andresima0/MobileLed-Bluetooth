@@ -10,8 +10,7 @@
 
 
 
-:warning: Use the code for the ESP32 as described in: https://github.com/andresima0/MobileLed-Bluetooth/blob/main/mobileLed_Bt%20-%20for%20ESP32/mobileLed_Bt_v2.ino
-
+:warning: Use the code for the ESP32 as described in: https://github.com/andresima0/MobileLed-Bluetooth/blob/main/mobileLed_Bt%20-%20for%20ESP32/mobileLed_Bt_v3.ino
 #
 
 ## Portuguese version:
@@ -24,5 +23,5 @@
    - Quando a GPIO 13 do ESP32 recebe 3.3V, o botão muda para a cor vermelha.
    - Não tem uma ação direta associada para o usuário, servindo apenas como um indicador visual do estado da GPIO 13 do ESP32.
 
-:warning:  Use o código para o ESP32 descrito em: https://github.com/andresima0/MobileLed-Bluetooth/blob/main/mobileLed_Bt%20-%20for%20ESP32/mobileLed_Bt_v2.ino
+:warning:  Use o código para o ESP32 descrito em: https://github.com/andresima0/MobileLed-Bluetooth/blob/main/mobileLed_Bt%20-%20for%20ESP32/mobileLed_Bt_v3.ino
 
