@@ -5,6 +5,6 @@
 https://github.com/andresima0/Help-ESP32/tree/main/macAddress
 
 <p align="center">
-  <img src="https://github.com/andresima0/MobileLed-Bluetooth/assets/111400782/5ebb5627-2513-4dec-a82b-187176d3018c)" 
-    alt="mobileledBluetooth" width="600">
+  <img src="https://github.com/andresima0/MobileLed-Bluetooth/assets/111400782/e1faf948-8ee2-41ed-84bc-258d6fe175a5" 
+    alt="mobileledBluetooth" width="300">
 </p>
