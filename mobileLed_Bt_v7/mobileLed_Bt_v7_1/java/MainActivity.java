@@ -1107,7 +1107,6 @@ public class MainActivity extends AppCompatActivity {
         updateButtonLed22Color();
         updateButtonLed23Color();
         updateButtonLed24Color();
-
     }
 
     @Override
